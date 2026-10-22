@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Product page</h1>
+    
+    {% for product in products %}
+        <p>{{product.name}} price {{product.price}}</p>
+
+    {% empty %}
+        <p>There is no products </p>
+    {% endfor %}
+        
+{% endblock content %}
